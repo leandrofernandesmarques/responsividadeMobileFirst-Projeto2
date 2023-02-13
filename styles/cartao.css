@@ -1,0 +1,87 @@
+.section__card{
+    display: grid;
+    grid-template-columns: 179px auto;
+    grid-template-rows: repeat(5,auto);
+    gap: 0.5em;
+    background-color: var(--branco);
+    justify-content: center;
+    margin: 1em 1em;
+    padding: 2em 2em .5em 2em ;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0,0.25);
+}
+
+.img__avaliacao{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.p__descricao__titulo{
+    grid-column: 1 / 2;
+    grid-row: 2/3;
+    color: var(--laranja);
+    font-weight: 500;    
+}
+.h3__titulo-card{
+    grid-row: 3/4;
+    grid-column: 1/2;
+    color: var(--azul-marinho);
+    font-weight: 700;
+    flex-wrap: wrap;
+    padding-right: 4em;
+    line-height: 22px;
+}
+.p__descricao-card{
+    grid-row: 4/5;
+    grid-column: 1 / 2;
+    font-size: 14px;
+    color: var(--preto);
+    line-height: 18px;    
+}
+.logo__angular{
+    grid-row: 1/5;
+    justify-self: end;
+}
+.icones{
+    grid-row: 5/6;
+    grid-column: 1/2;    
+}
+.botao__saiba-mais{
+    grid-row: 5/6;
+    grid-column: 2/3;
+    justify-self: end;
+    align-self: center;
+    padding: 0.8em 1.7em;
+    background-color: var(--laranja);
+    color: var(--branco);
+    text-decoration: none;
+}
+
+
+@media screen and (min-width:1024px) {
+    .section__card{
+        grid-template-columns: 2fr 1fr;
+        width: 40%;
+        margin:2em auto;
+    }   
+}
+
+@media screen and (min-width:1728px) {
+    .section__card{
+        width: 110%;
+                
+    }
+    .h3__titulo-card{
+        font-size: 18px;
+    }
+    .p__descricao__titulo{
+        font-size: 32px;
+        font-weight: 700;
+    }
+    
+    
+    
+}
+
+
+
+

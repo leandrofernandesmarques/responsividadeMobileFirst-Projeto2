@@ -1,0 +1,26 @@
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/carrossel.css");
+@import url("styles/cartao.css");
+@import url("styles/mais-vendidos-carrossel.css");
+@import url("styles/topicos.css");
+@import url("styles/newsletter.css");
+@import url("styles/footer.css");
+:root{
+    --cor-de-fundo: #EBECEE;
+    --branco: #FFFFFF;
+    --laranja: #EB9800;
+    --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --fonte-principal: "Poppins";
+    --azul-marinho: #002F52;
+    --preto: #000000;
+    --cinza-claro: #F9F9F9;
+    --fonte-secundaria:"Josefin Sans"
+}
+body{
+    background-color: var(--cor-de-fundo);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 400;
+}
+

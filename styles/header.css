@@ -1,0 +1,156 @@
+.cabecalho__menu-hamburguer{
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    margin-right: 10px;
+    background-image: url("../img/Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cabecalho{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;    
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.container__imagem{
+    padding: 1em 0.5em;    
+}
+.lista-menu{
+    display: none;
+    position: absolute;/* Permite a movimentação de acordo com o pai desde que esteja diferente de estatic(cabeçalho que está como relative) */
+    top: 100%;
+    background-color: var(--branco);
+    
+}
+.container__botao:checked ~ .lista-menu{/* Detecta se o se está ticado, se sim procura .item-menu e adiciona display-block */
+    display: block;
+}
+
+.container__botao:checked~.container__rotulo{
+    background: var(--azul-degrade);
+}
+.container__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburguer{
+    background-image: url("../img/Menu\ Aberto.png");
+}
+.lista-menu__titulo{
+    color: var(--laranja);
+    font-weight: 700;
+    font-family: var(--fonte-principal);
+    margin-bottom: 1.5em;
+    font-size: 18px;
+    font-weight: 400;
+}
+.lista-menu__item{
+    padding: 2em 3em 1em 1em;
+}
+.lista-menu__link{
+    font-family: var(--fonte-principal);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;/* Essas opções são para outros navegadores mais chatos */
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+    text-transform: uppercase;
+}
+.container__botao{
+    display: none;
+}
+.container__titulo{
+    display: none;
+}
+.opcoes{
+    display: none;
+}
+.a__titulo-icone{
+    display: none;
+}
+
+
+@media screen and (min-width:1024px){
+    .cabecalho__menu-hamburguer{
+        display: none;
+    }
+    .cabecalho{
+        padding-left: 80px;
+    }
+    .container__titulo {
+        display: block;
+        font-family: var(--fonte-secundaria);
+        font-weight: 400;
+        font-size: 30px;
+    }
+    .container__titulo--negrito{
+        font-weight: 700;
+    }
+    .opcoes{
+        display: flex;        
+    }
+    .opcoes__item{
+        margin: 0 1em;
+        text-transform: uppercase;
+    }
+    .opcoes__link{
+        text-decoration: none;
+        margin:0 1em;
+        color: var(--preto);
+        text-transform: uppercase;
+    }
+    .img__favoritos{
+        display: none;
+    }
+    .opcoes__botao:checked~.lista-menu{
+        display: block;
+        width: auto;
+    }
+    .opcoes__botao{
+        display: none;
+    }    
+    .opcoes__botao:checked ~ .opcoes__rotulo > .opcoes__item{
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+    .opcoes__item{
+        padding: 2em 1em;
+    }
+    .lista-menu__item{
+        padding: auto;
+    }
+
+    .lista-menu__item:hover {        
+        background: var(--azul-degrade);
+        
+        
+    }
+    
+    .lista-menu__item:hover > .lista-menu__link{
+        -webkit-text-fill-color: var(--branco);
+        
+    }
+
+}
+
+@media screen and (min-width:1728px) {
+    .cabecalho{
+        padding-right: 5em;
+    }
+    .opcoes{
+        margin-right: auto;
+        margin-left: 3em;        
+    }
+    .a__titulo-icone{
+        text-decoration: none;
+        font-size: 20px;
+        padding-right: 2em;
+    }
+
+    
+}
